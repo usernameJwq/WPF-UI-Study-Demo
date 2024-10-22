@@ -1,0 +1,49 @@
+﻿<Page x:Class="WPF.UI.Study.Views.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF.UI.Study.Views.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="SettingsPage"
+      d:DataContext="{d:DesignInstance local:SettingsPage, IsDesignTimeCreatable=False}"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+      ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+      Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+      mc:Ignorable="d">
+
+    <StackPanel>
+        <ui:CardControl Margin="15,0,15,5">
+            <ui:CardControl.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ui:TextBlock
+                        Grid.Row="0"
+                        Text="主题"/>
+                    <ui:TextBlock
+                        Grid.Row="1"
+                        Text="更换App主题颜色"/>
+                </Grid>
+            </ui:CardControl.Header>
+            <ComboBox
+                  MinWidth="200"
+                  IsEnabled="True"
+                  SelectedIndex="{Binding ViewModel.CurApplicationTheme, Converter={StaticResource ComboBoxIndexToApplicationThemeConverter}, Mode=TwoWay}">
+                <ComboBoxItem
+                    Content="亮色"
+                    FontSize="15"/>
+                <ComboBoxItem
+                    Content="暗色"
+                    FontSize="15"/>
+                <ComboBoxItem
+                    Content="高对比度"
+                    FontSize="15"/>
+            </ComboBox>
+        </ui:CardControl>
+    </StackPanel>
+</Page>
