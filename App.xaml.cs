@@ -48,6 +48,8 @@ namespace WPF.UI.Study
                 _ = services.AddSingleton<ViewMode.DataPageViewModel>();
                 _ = services.AddSingleton<Views.Pages.DashboardPage>();
                 _ = services.AddSingleton<ViewMode.DashboardPageViewModel>();
+                _ = services.AddSingleton<Views.Pages.NAudioRecordPage>();
+                _ = services.AddSingleton<ViewMode.NAudioRecordViewModel>();
 
                 // Configuration
                 _ = services.Configure<AppConfig>(context.Configuration.GetSection(nameof(AppConfig)));
