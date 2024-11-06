@@ -40,7 +40,8 @@ namespace WPF.UI.Study.Services
                 )!;
                 _navigationWindow!.ShowWindow();
 
-                var page = Type.GetType("WPF.UI.Study.Views.Pages.DataPage");
+                // 启动程序，界面默认跳转首页
+                var page = Type.GetType("WPF.UI.Study.Views.Pages.DashboardPage");
                 _ = _navigationWindow.Navigate(page);
             }
 
