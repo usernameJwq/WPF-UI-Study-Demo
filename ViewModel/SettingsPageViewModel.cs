@@ -3,7 +3,7 @@ using Wpf.Ui.Appearance;
 
 namespace WPF.UI.Study.ViewMode
 {
-    public class SettingsPageViewModel : ObservableObject
+    public partial class SettingsPageViewModel : ObservableObject
     {
         private string _appVersion;
         public string AppVersion

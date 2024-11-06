@@ -66,6 +66,12 @@ namespace WPF.UI.Study.ViewMode
                 },
                 new NavigationViewItem()
                 {
+                    Content = "AudioRecord",
+                    Icon = new SymbolIcon { Symbol = SymbolRegular.Mic24 },
+                    TargetPageType = typeof(NAudioRecordPage)
+                },
+                new NavigationViewItem()
+                {
                     Content = "Data",
                     Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
                     TargetPageType = typeof(DataPage)
@@ -84,7 +90,7 @@ namespace WPF.UI.Study.ViewMode
 
             TrayMenuItems = new ObservableCollection<MenuItem>
             {
-                new MenuItem() {Header = "Home", Tag = "Tray_Home"}
+                new MenuItem() { Header = "Home", Tag = "Tray_Home" }
             };
 
             _isInitialized = true;
