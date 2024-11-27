@@ -5,6 +5,7 @@
     <RootNamespace>WPF_UI_Study</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
+	<VersionPrefix>0.1.0</VersionPrefix>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
@@ -58,6 +59,7 @@
     <PackageReference Include="System.Security.AccessControl" />
     <PackageReference Include="System.Text.Encodings.Web" />
     <PackageReference Include="System.Text.Json" />
+    <PackageReference Include="Velopack" />
     <PackageReference Include="WPF-UI" />
     <PackageReference Include="WPF-UI.Tray" />
   </ItemGroup>

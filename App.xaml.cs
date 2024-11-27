@@ -8,6 +8,7 @@ using WPF.UI.Study.Services;
 using Wpf.Ui;
 using System.Windows.Threading;
 using WPF.UI.Study.Models;
+using Velopack;
 
 namespace WPF.UI.Study
 {
@@ -70,6 +71,10 @@ namespace WPF.UI.Study
         /// </summary>
         private async void OnStartup(object sender, StartupEventArgs e)
         {
+            VelopackApp.Build()
+                .WithFirstRun((v) => { /* Your first run code here */ })
+                .Run();
+
             await _host.StartAsync();
         }
 
